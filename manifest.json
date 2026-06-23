@@ -1,0 +1,20 @@
+{
+  "name": "Vida Fit Inteligente",
+  "short_name": "Vida Fit",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4fff7",
+  "theme_color": "#198754",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vida Fit Inteligente</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#198754">
+</head>
+
+<body>
+
+<header>
+    <h1>🥗 Vida Fit Inteligente</h1>
+    <p>Resultados reais sem dietas loucas.</p>
+</header>
+
+<nav>
+    <a href="#calculadora">Calculadora</a>
+    <a href="#treinos">Treinos</a>
+    <a href="#alimentar">Plano Alimentar</a>
+    <a href="#premium">Premium</a>
+</nav>
+
+<section class="banner">
+    <h2>Coma melhor. Treine melhor. Viva melhor.</h2>
+    <p>Calcule suas calorias, escolha seu tipo de treino e comece uma rotina saudável sem exageros.</p>
+    <a href="#calculadora">Começar agora</a>
+
+    </section>
+
+
+
+<section id="calculadora" class="box">
+    <h2>🔥 Calculadora de Calorias</h2>
+
+    <div class="formulario">
+        <input type="number" id="peso" placeholder="Peso em kg">
+        <input type="number" id="altura" placeholder="Altura em cm">
+        <input type="number" id="idade" placeholder="Idade">
+
+        <select id="sexo">
+            <option value="">Sexo</option>
+            <option value="homem">Homem</option>
+            <option value="mulher">Mulher</option>
+        </select>
+
+        <select id="objetivo">
+            <option value="">Objetivo</option>
+            <option value="emagrecer">Emagrecer</option>
+            <option value="massa">Ganhar massa muscular</option>
+            <option value="manter">Manter peso</option>
+            <option value="condicionamento">Melhorar condicionamento</option>
+        </select>
+
+        <button onclick="calcularCalorias()">Calcular</button>
+    </div>
+
+    <div id="resultado" class="resultado"></div>
+</section>
+
+<section class="box">
+    <h2>🔥 O que é Déficit Calórico?</h2>
+
+    <div class="card">
+        <h3>Entenda de forma simples</h3>
+
+        <p>Déficit calórico acontece quando você consome menos calorias do que seu corpo gasta durante o dia.</p>
+        <br>
+
+        <p>Exemplo:</p>
+        <p>Seu corpo precisa de aproximadamente <strong>2.000 kcal</strong> para manter o peso atual.</p>
+        <p>Se você consumir <strong>1.700 kcal</strong>, estará em déficit de <strong>300 kcal</strong>.</p>
+        <br>
+
+        <p>Com o tempo, seu corpo utiliza a gordura armazenada para produzir energia, favorecendo o emagrecimento.</p>
+        <br>
+
+        <h3>⚠️ Importante</h3>
+        <p>Déficit calórico não significa passar fome.</p>
+        <p>O objetivo é consumir alimentos de qualidade em quantidades adequadas.</p>
+        <br>
+
+        <h3>✅ O que ajuda a emagrecer?</h3>
+        <p>🥗 Alimentação equilibrada</p>
+        <p>💧 Boa hidratação</p>
+        <p>💪 Exercícios físicos</p>
+        <p>😴 Sono de qualidade</p>
+        <p>📈 Consistência ao longo do tempo</p>
+        <br>
+
+        <h3>❌ O que não funciona?</h3>
+        <p>Dietas extremamente restritivas</p>
+        <p>Pular refeições constantemente</p>
+        <p>Promessas milagrosas de emagrecimento</p>
+        <br>
+
+        <p><strong>Resultados reais acontecem através de hábitos saudáveis e consistentes.</strong></p>
+    </div>
+</section>
+ 
+<section id="treinos">
+    <h2>💪 Escolha onde você treina</h2>
+
+    <div class="opcoes">
+        <button onclick="mostrarTreino('casa')">🏠 Treino em Casa</button>
+        <button onclick="mostrarTreino('ginasio')">🏋️ Treino no Ginásio</button>
+    </div>
+
+    <div id="treinoResultado" class="cards"></div>
+</section>
+
+<section id="alimentar" class="box">
+    <h2>🥗 Plano Alimentar para Iniciantes</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Café da Manhã</h3>
+            <p>Ovos mexidos, aveia com banana ou iogurte natural com frutas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Almoço</h3>
+            <p>Arroz, feijão, frango ou peixe, salada e legumes.</p>
+        </div>
+
+        <div class="card">
+            <h3>Lanche</h3>
+            <p>Fruta, iogurte, pão integral com queijo ou castanhas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Jantar</h3>
+            <p>Proteína magra, legumes, salada ou uma refeição leve e equilibrada.</p>
+        </div>
+    </div>
+</section>
+<section id="diario" class="box">
+    <h2>🍽️ Diário Alimentar</h2>
+    <p style="text-align:center;">
+        Digite o que comeu. Exemplo: 100 arroz, 150 frango, 2 ovo, 1 banana
+    </p>
+
+    <textarea id="refeicao" placeholder="Exemplo:
+100 arroz
+150 frango
+2 ovo
+1 banana"></textarea>
+
+    <button onclick="calcularRefeicao()">Calcular calorias consumidas</button>
+
+    <div id="resultadoRefeicao" class="resultado"></div>
+</section>
+
+<section id="premium" class="premium">
+    <h2>👑 Área Premium</h2>
+    <p>Treinos intermediários, avançados, receitas exclusivas e acompanhamento semanal.</p>
+   <button onclick="desbloquearPremium()">
+🔒 Desbloquear Premium
+</button>
+
+<div id="premiumConteudo"></div>
+</section>
+
+<footer>
+    <p>© 2026 Vida Fit Inteligente</p>
+    <p>Saúde, treino e alimentação sem loucuras.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
